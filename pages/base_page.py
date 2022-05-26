@@ -5,6 +5,3 @@ class BasePage():
 
     def open(self): 
         self.browser.get(self.url)
-        
-#test_new_2        
-        
