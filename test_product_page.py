@@ -1,4 +1,4 @@
-from .pages.product_page import ProductPage
+from pages.product_page import ProductPage
 import pytest
 
 

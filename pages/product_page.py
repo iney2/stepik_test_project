@@ -1,5 +1,5 @@
-from .base_page import BasePage
-from .locators import ProductPageLocators
+from pages.base_page import BasePage
+from pages.locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
@@ -23,3 +23,11 @@ class ProductPage(BasePage):
     def success_message_should_disappeared(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message is presented, but should not be"
+
+    def no_goods_in_the_basket(self):
+        assert self.is_disappeared(*ProductPageLocators.GOODS_IN_THE_BASKET), \
+            "Success message is presented, but should not be"
+
+    def basket_is_empty_message_exist(self):
+        assert self.is_not_element_present(*ProductPageLocators.BASKET_IS_EMPTY), \
+            "Basket is empty"
